@@ -102,9 +102,9 @@ public class Levels {
     public static void Level2(Board board) {
         board.currentLevel = 2;
         board.clearBoard();
-        board.grid[0][1] = BIG_SNOWBALL;
-        board.grid[0][3] = SNOWMAN_HEAD;
-        board.grid[1][2] = TREE;
+        board.grid[1][0] = BIG_SNOWBALL;
+        board.grid[1][3] = SNOWMAN_HEAD;
+        board.grid[2][1] = TREE;
         board.grid[2][4] = SMALL_SNOWBALL;
     }
 
@@ -112,8 +112,8 @@ public class Levels {
         board.currentLevel = 3;
         board.clearBoard();
         board.grid[0][0] = TREE;
-        board.grid[0][3] = SMALL_SNOWBALL;
-        board.grid[1][2] = SMALL_SNOWBALL;
+        board.grid[0][3] = BIG_SNOWBALL;
+        board.grid[1][3] = SMALL_SNOWBALL;
         board.grid[2][4] = SNOWMAN_HEAD;
         board.grid[3][1] = TREE;
     }
@@ -121,10 +121,10 @@ public class Levels {
     public static void Level4(Board board) {
         board.currentLevel = 4;
         board.clearBoard();
-        board.grid[0][1] = TREE;
-        board.grid[0][4] = BIG_SNOWBALL;
-        board.grid[2][4] = SMALL_SNOWBALL;
-        board.grid[3][1] = SNOWMAN_HEAD;
+        board.grid[0][0] = TREE;
+        board.grid[0][4] = SMALL_SNOWBALL;
+        board.grid[3][0] = SNOWMAN_HEAD;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level5(Board board) {
@@ -134,38 +134,38 @@ public class Levels {
         board.grid[0][2] = TREE;
         board.grid[0][4] = TREE;
         board.grid[1][2] = SNOWMAN_HEAD;
-        board.grid[2][0] = SMALL_SNOWBALL;
+        board.grid[3][0] = SMALL_SNOWBALL;
         board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level6(Board board) {
         board.currentLevel = 6;
         board.clearBoard();
-        board.grid[0][0] = SNOWMAN_HEAD;
         board.grid[0][2] = TREE;
-        board.grid[0][4] = SMALL_SNOWBALL;
-        board.grid[2][2] = BIG_SNOWBALL;
-        board.grid[3][4] = SMALL_SNOWBALL;
+        board.grid[1][0] = SNOWMAN_HEAD;
+        board.grid[1][1] = SMALL_SNOWBALL;
+        board.grid[1][3] = BIG_SNOWBALL;
+        board.grid[3][2] = TREE;
     }
 
     public static void Level7(Board board) {
         board.currentLevel = 7;
         board.clearBoard();
-        board.grid[0][0] = TREE;
-        board.grid[0][1] = TREE;
+        board.grid[1][1] = TREE;
+        board.grid[1][2] = TREE;
         board.grid[2][4] = SNOWMAN_HEAD;
         board.grid[3][0] = SMALL_SNOWBALL;
-        board.grid[3][1] = BIG_SNOWBALL;
+        board.grid[3][2] = BIG_SNOWBALL;
     }
 
     public static void Level8(Board board) {
         board.currentLevel = 8;
         board.clearBoard();
-        board.grid[0][2] = TREE;
+        board.grid[0][1] = TREE;
         board.grid[0][3] = SMALL_SNOWBALL;
         board.grid[0][4] = BIG_SNOWBALL;
-        board.grid[2][4] = SMALL_SNOWBALL;
-        board.grid[3][0] = SNOWMAN_HEAD;
+        board.grid[2][4] = TREE;
+        board.grid[3][2] = SNOWMAN_HEAD;
     }
 
     public static void Level9(Board board) {
@@ -173,7 +173,7 @@ public class Levels {
         board.clearBoard();
         board.grid[0][0] = TREE;
         board.grid[0][2] = SMALL_SNOWBALL;
-        board.grid[0][3] = SNOWMAN_HEAD;
+        board.grid[1][3] = SNOWMAN_HEAD;
         board.grid[3][1] = BIG_SNOWBALL;
         board.grid[3][4] = TREE;
     }
@@ -183,8 +183,9 @@ public class Levels {
         board.clearBoard();
         board.grid[0][0] = TREE;
         board.grid[0][2] = TREE;
-        board.grid[1][2] = SMALL_SNOWBALL;
-        board.grid[2][4] = SNOWMAN_HEAD;
+        board.grid[1][1] = TREE;
+        board.grid[2][3] = SNOWMAN_HEAD;
+        board.grid[3][1] = SMALL_SNOWBALL;
         board.grid[3][4] = BIG_SNOWBALL;
     }
 
@@ -194,19 +195,19 @@ public class Levels {
         board.grid[0][0] = TREE;
         board.grid[0][1] = TREE;
         board.grid[0][3] = SNOWMAN_HEAD;
+        board.grid[2][0] = SMALL_SNOWBALL;
         board.grid[2][4] = TREE;
-        board.grid[3][0] = SMALL_SNOWBALL;
-        board.grid[3][1] = BIG_SNOWBALL;
+        board.grid[3][0] = BIG_SNOWBALL;
     }
 
     public static void Level12(Board board) {
         board.currentLevel = 12;
         board.clearBoard();
         board.grid[0][0] = TREE;
-        board.grid[0][2] = SMALL_SNOWBALL;
+        board.grid[0][1] = BIG_SNOWBALL;
         board.grid[0][4] = TREE;
-        board.grid[2][2] = SNOWMAN_HEAD;
-        board.grid[2][4] = BIG_SNOWBALL;
+        board.grid[2][1] = SNOWMAN_HEAD;
+        board.grid[2][3] = SMALL_SNOWBALL;
     }
 
     public static void Level13(Board board) {
@@ -214,17 +215,17 @@ public class Levels {
         board.clearBoard();
         board.grid[0][0] = TREE;
         board.grid[0][2] = SMALL_SNOWBALL;
+        board.grid[1][4] = SNOWMAN_HEAD;
         board.grid[2][1] = TREE;
-        board.grid[2][4] = SNOWMAN_HEAD;
         board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level14(Board board) {
         board.currentLevel = 14;
         board.clearBoard();
-        board.grid[0][0] = TREE;
-        board.grid[0][3] = TREE;
-        board.grid[2][2] = SMALL_SNOWBALL;
+        board.grid[0][1] = TREE;
+        board.grid[1][3] = TREE;
+        board.grid[2][0] = SMALL_SNOWBALL;
         board.grid[3][2] = SNOWMAN_HEAD;
         board.grid[3][4] = BIG_SNOWBALL;
     }
@@ -234,10 +235,10 @@ public class Levels {
         board.clearBoard();
         board.grid[0][0] = TREE;
         board.grid[0][1] = TREE;
+        board.grid[0][4] = SMALL_SNOWBALL;
+        board.grid[1][4] = SNOWMAN_HEAD;
         board.grid[2][0] = BIG_SNOWBALL;
-        board.grid[2][2] = SNOWMAN_HEAD;
         board.grid[3][2] = TREE;
-        board.grid[3][4] = SMALL_SNOWBALL;
     }
 
     public static void Level16(Board board) {
@@ -246,43 +247,42 @@ public class Levels {
         board.grid[0][0] = TREE;
         board.grid[0][1] = TREE;
         board.grid[1][4] = SNOWMAN_HEAD;
-        board.grid[2][4] = SMALL_SNOWBALL;
-        board.grid[3][2] = TREE;
-        board.grid[3][4] = SMALL_SNOWBALL;
+        board.grid[2][0] = SMALL_SNOWBALL;
+        board.grid[3][0] = BIG_SNOWBALL;
+        board.grid[3][1] = TREE;
     }
 
     public static void Level17(Board board) {
         board.currentLevel = 17;
         board.clearBoard();
         board.grid[0][1] = TREE;
-        board.grid[0][3] = TREE;
+        board.grid[1][4] = TREE;
         board.grid[2][0] = TREE;
-        board.grid[2][3] = SNOWMAN_HEAD;
-        board.grid[2][4] = SMALL_SNOWBALL;
-        board.grid[3][2] = TREE;
+        board.grid[2][3] = SMALL_SNOWBALL;
+        board.grid[3][3] = SNOWMAN_HEAD;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level18(Board board) {
         board.currentLevel = 18;
         board.clearBoard();
-        board.grid[0][1] = TREE;
         board.grid[0][2] = TREE;
         board.grid[0][3] = SMALL_SNOWBALL;
         board.grid[0][4] = BIG_SNOWBALL;
         board.grid[1][0] = TREE;
-        board.grid[1][4] = TREE;
+        board.grid[2][3] = TREE;
         board.grid[3][1] = SNOWMAN_HEAD;
     }
 
     public static void Level19(Board board) {
         board.currentLevel = 19;
         board.clearBoard();
-        board.grid[0][1] = TREE;
+        board.grid[0][2] = TREE;
         board.grid[0][4] = SMALL_SNOWBALL;
         board.grid[1][0] = TREE;
         board.grid[1][4] = TREE;
         board.grid[2][1] = SNOWMAN_HEAD;
-        board.grid[3][3] = SMALL_SNOWBALL;
+        board.grid[3][3] = BIG_SNOWBALL;
     }
 
     public static void Level20(Board board) {
@@ -290,51 +290,52 @@ public class Levels {
         board.clearBoard();
         board.grid[0][1] = TREE;
         board.grid[1][3] = SNOWMAN_HEAD;
-        board.grid[2][2] = SMALL_SNOWBALL;
-        board.grid[3][3] = TREE;
+        board.grid[2][0] = BIG_SNOWBALL;
+        board.grid[3][2] = TREE;
+        board.grid[3][4] = SMALL_SNOWBALL;
     }
 
     public static void Level21(Board board) {
         board.currentLevel = 21;
         board.clearBoard();
-        board.grid[0][2] = SNOWMAN_HEAD;
+        board.grid[0][3] = SNOWMAN_HEAD;
         board.grid[1][0] = TREE;
-        board.grid[2][3] = TREE;
+        board.grid[2][4] = TREE;
         board.grid[3][0] = SMALL_SNOWBALL;
-        board.grid[3][4] = BIG_SNOWBALL;
+        board.grid[3][2] = BIG_SNOWBALL;
     }
 
     public static void Level22(Board board) {
         board.currentLevel = 22;
         board.clearBoard();
         board.grid[0][1] = TREE;
-        board.grid[0][4] = SMALL_SNOWBALL;
+        board.grid[0][3] = SMALL_SNOWBALL;
         board.grid[1][0] = TREE;
-        board.grid[2][2] = SNOWMAN_HEAD;
-        board.grid[3][4] = SMALL_SNOWBALL;
+        board.grid[2][0] = SNOWMAN_HEAD;
+        board.grid[3][2] = TREE;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level23(Board board) {
         board.currentLevel = 23;
         board.clearBoard();
         board.grid[0][2] = TREE;
-        board.grid[1][1] = TREE;
-        board.grid[1][3] = SNOWMAN_HEAD;
+        board.grid[1][0] = TREE;
+        board.grid[1][4] = SNOWMAN_HEAD;
         board.grid[2][1] = TREE;
-        board.grid[3][1] = SMALL_SNOWBALL;
+        board.grid[3][0] = BIG_SNOWBALL;
         board.grid[3][4] = SMALL_SNOWBALL;
     }
 
     public static void Level24(Board board) {
         board.currentLevel = 24;
         board.clearBoard();
-        board.grid[0][1] = TREE;
-        board.grid[0][3] = SNOWMAN_HEAD;
-        board.grid[1][1] = TREE;
-        board.grid[1][3] = TREE;
-        board.grid[2][2] = SMALL_SNOWBALL;
-        board.grid[2][4] = TREE;
-        board.grid[3][4] = SMALL_SNOWBALL;
+        board.grid[0][2] = SNOWMAN_HEAD;
+        board.grid[1][0] = TREE;
+        board.grid[1][4] = TREE;
+        board.grid[2][1] = TREE;
+        board.grid[3][1] = SMALL_SNOWBALL;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level25(Board board) {
@@ -343,17 +344,18 @@ public class Levels {
         board.grid[0][0] = TREE;
         board.grid[0][2] = TREE;
         board.grid[0][4] = SMALL_SNOWBALL;
-        board.grid[1][3] = SNOWMAN_HEAD;
-        board.grid[2][0] = SMALL_SNOWBALL;
-        board.grid[2][2] = TREE;
+        board.grid[2][3] = SNOWMAN_HEAD;
+        board.grid[3][0] = BIG_SNOWBALL;
+        board.grid[3][1] = TREE;
     }
 
     public static void Level26(Board board) {
         board.currentLevel = 26;
         board.clearBoard();
-        board.grid[0][1] = TREE;
-        board.grid[0][3] = SMALL_SNOWBALL;
-        board.grid[1][3] = TREE;
+        board.grid[0][0] = TREE;
+        board.grid[0][2] = BIG_SNOWBALL;
+        board.grid[1][4] = TREE;
+        board.grid[2][0] = TREE;
         board.grid[3][0] = SMALL_SNOWBALL;
         board.grid[3][3] = SNOWMAN_HEAD;
     }
@@ -362,33 +364,32 @@ public class Levels {
         board.currentLevel = 27;
         board.clearBoard();
         board.grid[0][1] = TREE;
-        board.grid[1][0] = SNOWMAN_HEAD;
-        board.grid[1][3] = TREE;
-        board.grid[2][2] = TREE;
-        board.grid[3][3] = SMALL_SNOWBALL;
+        board.grid[0][4] = SMALL_SNOWBALL;
+        board.grid[1][4] = TREE;
+        board.grid[2][0] = SNOWMAN_HEAD;
+        board.grid[3][2] = TREE;
+        board.grid[3][3] = BIG_SNOWBALL;
     }
 
     public static void Level28(Board board) {
         board.currentLevel = 28;
         board.clearBoard();
-        board.grid[0][1] = TREE;
-        board.grid[1][3] = TREE;
-        board.grid[2][1] = SMALL_SNOWBALL;
-        board.grid[3][3] = SMALL_SNOWBALL;
-        board.grid[3][4] = SNOWMAN_HEAD;
+        board.grid[0][0] = TREE;
+        board.grid[1][4] = TREE;
+        board.grid[2][0] = SMALL_SNOWBALL;
+        board.grid[3][0] = BIG_SNOWBALL;
+        board.grid[3][3] = SNOWMAN_HEAD;
     }
 
     public static void Level29(Board board) {
         board.currentLevel = 29;
         board.clearBoard();
-        board.grid[0][1] = SNOWMAN_HEAD;
-        board.grid[0][3] = SNOWMAN_HEAD;
-        board.grid[1][1] = BIG_SNOWBALL;
-        board.grid[1][3] = BIG_SNOWBALL;
-        board.grid[3][0] = SMALL_SNOWBALL;
-        board.grid[3][1] = SMALL_SNOWBALL;
-        board.grid[3][3] = SMALL_SNOWBALL;
-        board.grid[3][4] = SMALL_SNOWBALL;
+        board.grid[1][1] = SNOWMAN_HEAD;
+        board.grid[1][3] = SNOWMAN_HEAD;
+        board.grid[2][0] = BIG_SNOWBALL;
+        board.grid[2][1] = SMALL_SNOWBALL;
+        board.grid[2][3] = SMALL_SNOWBALL;
+        board.grid[2][4] = BIG_SNOWBALL;
     }
 
     public static void Level30(Board board) {
@@ -397,100 +398,106 @@ public class Levels {
         board.grid[0][0] = SNOWMAN_HEAD;
         board.grid[0][2] = TREE;
         board.grid[0][4] = SMALL_SNOWBALL;
-        board.grid[1][1] = BIG_SNOWBALL;
-        board.grid[1][4] = SMALL_SNOWBALL;
-        board.grid[2][0] = SNOWMAN_HEAD;
-        board.grid[2][2] = SMALL_SNOWBALL;
-        board.grid[2][3] = TREE;
+        board.grid[1][0] = BIG_SNOWBALL;
+        board.grid[2][3] = SMALL_SNOWBALL;
+        board.grid[3][0] = SNOWMAN_HEAD;
+        board.grid[3][1] = BIG_SNOWBALL;
+        board.grid[3][2] = TREE;
     }
 
     public static void Level31(Board board) {
         board.currentLevel = 31;
         board.clearBoard();
-        board.grid[0][0] = SMALL_SNOWBALL;
+        board.grid[0][0] = BIG_SNOWBALL;
         board.grid[0][2] = SNOWMAN_HEAD;
-        board.grid[0][4] = SMALL_SNOWBALL;
+        board.grid[0][4] = BIG_SNOWBALL;
         board.grid[1][0] = TREE;
         board.grid[1][2] = SNOWMAN_HEAD;
-        board.grid[3][1] = SMALL_SNOWBALL;
-        board.grid[3][3] = SMALL_SNOWBALL;
+        board.grid[2][4] = SMALL_SNOWBALL;
+        board.grid[3][2] = SMALL_SNOWBALL;
     }
 
     public static void Level32(Board board) {
         board.currentLevel = 32;
         board.clearBoard();
-        board.grid[0][3] = SNOWMAN_HEAD;
-        board.grid[0][4] = SMALL_SNOWBALL;
+        board.grid[0][2] = SNOWMAN_HEAD;
+        board.grid[0][4] = BIG_SNOWBALL;
         board.grid[1][1] = TREE;
+        board.grid[1][3] = SNOWMAN_HEAD;
         board.grid[2][2] = TREE;
-        board.grid[3][1] = SMALL_SNOWBALL;
-        board.grid[3][3] = SMALL_SNOWBALL;
+        board.grid[3][0] = SMALL_SNOWBALL;
+        board.grid[3][2] = BIG_SNOWBALL;
+        board.grid[3][4] = SMALL_SNOWBALL;
     }
 
     public static void Level33(Board board) {
         board.currentLevel = 33;
         board.clearBoard();
-        board.grid[0][0] = SMALL_SNOWBALL;
+        board.grid[0][0] = BIG_SNOWBALL;
         board.grid[0][4] = SMALL_SNOWBALL;
         board.grid[1][0] = SNOWMAN_HEAD;
         board.grid[1][2] = SNOWMAN_HEAD;
         board.grid[3][2] = SMALL_SNOWBALL;
-        board.grid[3][3] = SMALL_SNOWBALL;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level34(Board board) {
         board.currentLevel = 34;
         board.clearBoard();
-        board.grid[0][0] = SMALL_SNOWBALL;
+        board.grid[0][0] = BIG_SNOWBALL;
         board.grid[0][2] = SNOWMAN_HEAD;
         board.grid[0][3] = SMALL_SNOWBALL;
-        board.grid[0][4] = SMALL_SNOWBALL;
+        board.grid[0][4] = BIG_SNOWBALL;
+        board.grid[1][0] = TREE;
         board.grid[2][0] = TREE;
         board.grid[2][3] = SNOWMAN_HEAD;
-        board.grid[3][4] = SMALL_SNOWBALL;
+        board.grid[3][3] = SMALL_SNOWBALL;
     }
 
     public static void Level35(Board board) {
         board.currentLevel = 35;
         board.clearBoard();
-        board.grid[0][1] = TREE;
+        board.grid[0][0] = TREE;
         board.grid[0][2] = TREE;
-        board.grid[0][3] = SNOWMAN_HEAD;
-        board.grid[0][4] = SMALL_SNOWBALL;
-        board.grid[3][0] = SMALL_SNOWBALL;
+        board.grid[0][3] = BIG_SNOWBALL;
+        board.grid[0][4] = SNOWMAN_HEAD;
+        board.grid[2][4] = SMALL_SNOWBALL;
+        board.grid[3][0] = BIG_SNOWBALL;
         board.grid[3][1] = SMALL_SNOWBALL;
-        board.grid[3][2] = SNOWMAN_HEAD;
-        board.grid[3][4] = SMALL_SNOWBALL;
+        board.grid[3][3] = SNOWMAN_HEAD;
     }
 
     public static void Level36(Board board) {
         board.currentLevel = 36;
         board.clearBoard();
-        board.grid[0][1] = SNOWMAN_HEAD;
-        board.grid[0][2] = TREE;
+        board.grid[0][0] = BIG_SNOWBALL;
+        board.grid[0][2] = SNOWMAN_HEAD;
         board.grid[0][4] = SMALL_SNOWBALL;
-        board.grid[1][0] = TREE;
-        board.grid[1][1] = SNOWMAN_HEAD;
+        board.grid[1][0] = SNOWMAN_HEAD;
+        board.grid[1][1] = TREE;
         board.grid[2][2] = TREE;
-        board.grid[3][0] = SMALL_SNOWBALL;
+        board.grid[3][0] = BIG_SNOWBALL;
+        board.grid[3][4] = SMALL_SNOWBALL;
     }
 
     public static void Level37(Board board) {
         board.currentLevel = 37;
         board.clearBoard();
         board.grid[0][0] = SNOWMAN_HEAD;
-        board.grid[0][2] = SMALL_SNOWBALL;
+        board.grid[0][2] = BIG_SNOWBALL;
         board.grid[0][4] = SMALL_SNOWBALL;
         board.grid[1][1] = TREE;
         board.grid[1][3] = SNOWMAN_HEAD;
-        board.grid[2][2] = TREE;
-        board.grid[3][1] = SMALL_SNOWBALL;
+        board.grid[2][3] = TREE;
+        board.grid[3][0] = BIG_SNOWBALL;
+        board.grid[3][2] = SMALL_SNOWBALL;
     }
 
     public static void Level38(Board board) {
         board.currentLevel = 38;
         board.clearBoard();
-        board.grid[0][0] = SMALL_SNOWBALL;
+        board.grid[0][0] = BIG_SNOWBALL;
+        board.grid[0][1] = BIG_SNOWBALL;
         board.grid[0][3] = SMALL_SNOWBALL;
         board.grid[1][0] = TREE;
         board.grid[1][1] = SNOWMAN_HEAD;
@@ -502,42 +509,46 @@ public class Levels {
     public static void Level39(Board board) {
         board.currentLevel = 39;
         board.clearBoard();
-        board.grid[0][1] = SNOWMAN_HEAD;
-        board.grid[0][3] = SMALL_SNOWBALL;
+        board.grid[0][0] = SNOWMAN_HEAD;
+        board.grid[0][3] = BIG_SNOWBALL;
         board.grid[1][0] = SMALL_SNOWBALL;
-        board.grid[2][2] = TREE;
+        board.grid[1][2] = TREE;
         board.grid[2][4] = SMALL_SNOWBALL;
+        board.grid[3][0] = BIG_SNOWBALL;
         board.grid[3][2] = SNOWMAN_HEAD;
     }
 
     public static void Level40(Board board) {
         board.currentLevel = 40;
         board.clearBoard();
-        board.grid[0][1] = TREE;
-        board.grid[0][2] = SNOWMAN_HEAD;
+        board.grid[0][0] = TREE;
+        board.grid[0][1] = SNOWMAN_HEAD;
+        board.grid[0][3] = BIG_SNOWBALL;
         board.grid[0][4] = SMALL_SNOWBALL;
-        board.grid[1][2] = SNOWMAN_HEAD;
-        board.grid[3][4] = TREE;
+        board.grid[1][0] = SNOWMAN_HEAD;
+        board.grid[1][2] = SMALL_SNOWBALL;
+        board.grid[3][0] = BIG_SNOWBALL;
+        board.grid[3][3] = TREE;
     }
 
     public static void Level41(Board board) {
         board.currentLevel = 41;
         board.clearBoard();
-        board.grid[0][0] = SMALL_SNOWBALL;
-        board.grid[0][2] = SNOWMAN_HEAD;
+        board.grid[0][0] = BIG_SNOWBALL;
         board.grid[0][4] = SMALL_SNOWBALL;
         board.grid[1][2] = SNOWMAN_HEAD;
         board.grid[2][0] = SMALL_SNOWBALL;
-        board.grid[3][0] = SMALL_SNOWBALL;
+        board.grid[2][2] = SNOWMAN_HEAD;
+        board.grid[3][0] = BIG_SNOWBALL;
     }
 
     public static void Level42(Board board) {
         board.currentLevel = 42;
         board.clearBoard();
-        board.grid[0][0] = SMALL_SNOWBALL;
+        board.grid[0][0] = BIG_SNOWBALL;
         board.grid[0][4] = SMALL_SNOWBALL;
         board.grid[1][1] = SNOWMAN_HEAD;
-        board.grid[2][0] = SMALL_SNOWBALL;
+        board.grid[2][0] = BIG_SNOWBALL;
         board.grid[2][2] = SNOWMAN_HEAD;
         board.grid[2][4] = SMALL_SNOWBALL;
     }
@@ -549,20 +560,21 @@ public class Levels {
         board.grid[0][1] = SNOWMAN_HEAD;
         board.grid[0][2] = TREE;
         board.grid[0][4] = SMALL_SNOWBALL;
-        board.grid[3][0] = SMALL_SNOWBALL;
+        board.grid[3][0] = BIG_SNOWBALL;
         board.grid[3][2] = SNOWMAN_HEAD;
-        board.grid[3][4] = SMALL_SNOWBALL;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level44(Board board) {
         board.currentLevel = 44;
         board.clearBoard();
-        board.grid[0][4] = SMALL_SNOWBALL;
+        board.grid[0][4] = BIG_SNOWBALL;
         board.grid[1][1] = TREE;
         board.grid[1][2] = SNOWMAN_HEAD;
         board.grid[1][3] = TREE;
         board.grid[2][2] = SNOWMAN_HEAD;
-        board.grid[3][1] = SMALL_SNOWBALL;
+        board.grid[3][0] = SMALL_SNOWBALL;
+        board.grid[3][3] = BIG_SNOWBALL;
         board.grid[3][4] = SMALL_SNOWBALL;
     }
 
@@ -570,46 +582,52 @@ public class Levels {
         board.currentLevel = 45;
         board.clearBoard();
         board.grid[0][1] = TREE;
-        board.grid[0][3] = SMALL_SNOWBALL;
-        board.grid[0][4] = SNOWMAN_HEAD;
-        board.grid[1][1] = SNOWMAN_HEAD;
-        board.grid[1][3] = TREE;
-        board.grid[2][0] = SMALL_SNOWBALL;
+        board.grid[1][0] = SMALL_SNOWBALL;
+        board.grid[1][2] = SMALL_SNOWBALL;
+        board.grid[1][4] = SNOWMAN_HEAD;
+        board.grid[2][1] = SNOWMAN_HEAD;
+        board.grid[2][3] = TREE;
+        board.grid[3][0] = BIG_SNOWBALL;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level46(Board board) {
         board.currentLevel = 46;
         board.clearBoard();
-        board.grid[0][0] = SMALL_SNOWBALL;
+        board.grid[0][0] = BIG_SNOWBALL;
         board.grid[0][1] = SMALL_SNOWBALL;
         board.grid[0][2] = TREE;
+        board.grid[0][3] = BIG_SNOWBALL;
         board.grid[0][4] = SNOWMAN_HEAD;
-        board.grid[1][1] = TREE;
-        board.grid[1][2] = SNOWMAN_HEAD;
-        board.grid[1][4] = SMALL_SNOWBALL;
+        board.grid[2][0] = TREE;
+        board.grid[2][1] = SNOWMAN_HEAD;
+        board.grid[2][4] = SMALL_SNOWBALL;
     }
 
     public static void Level47(Board board) {
         board.currentLevel = 47;
         board.clearBoard();
-        board.grid[0][1] = SNOWMAN_HEAD;
-        board.grid[0][3] = SMALL_SNOWBALL;
+        board.grid[0][0] = BIG_SNOWBALL;
+        board.grid[0][2] = SNOWMAN_HEAD;
+        board.grid[0][4] = SMALL_SNOWBALL;
         board.grid[1][1] = TREE;
-        board.grid[1][2] = TREE;
-        board.grid[2][4] = SMALL_SNOWBALL;
-        board.grid[3][0] = SMALL_SNOWBALL;
+        board.grid[1][3] = TREE;
+        board.grid[1][4] = SMALL_SNOWBALL;
+        board.grid[3][0] = SNOWMAN_HEAD;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level48(Board board) {
         board.currentLevel = 48;
         board.clearBoard();
-        board.grid[0][0] = TREE;
-        board.grid[0][3] = SMALL_SNOWBALL;
-        board.grid[1][2] = TREE;
-        board.grid[2][0] = SMALL_SNOWBALL;
-        board.grid[2][4] = SMALL_SNOWBALL;
-        board.grid[3][0] = SNOWMAN_HEAD;
-        board.grid[3][2] = SNOWMAN_HEAD;
+        board.grid[0][1] = TREE;
+        board.grid[0][4] = BIG_SNOWBALL;
+        board.grid[1][1] = SMALL_SNOWBALL;
+        board.grid[1][4] = TREE;
+        board.grid[3][1] = SNOWMAN_HEAD;
+        board.grid[3][2] = SMALL_SNOWBALL;
+        board.grid[3][3] = SNOWMAN_HEAD;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level49(Board board) {
@@ -618,140 +636,165 @@ public class Levels {
         board.grid[0][0] = SMALL_SNOWBALL;
         board.grid[0][1] = SMALL_SNOWBALL;
         board.grid[0][2] = SMALL_SNOWBALL;
-        board.grid[0][4] = SMALL_SNOWBALL;
-        board.grid[1][1] = TREE;
+        board.grid[0][3] = BIG_SNOWBALL;
+        board.grid[1][0] = TREE;
         board.grid[1][2] = SNOWMAN_HEAD;
         board.grid[1][3] = TREE;
-        board.grid[3][0] = SMALL_SNOWBALL;
-        board.grid[3][1] = SNOWMAN_HEAD;
-        board.grid[3][4] = SMALL_SNOWBALL;
+        board.grid[2][1] = BIG_SNOWBALL;
+        board.grid[2][2] = SNOWMAN_HEAD;
+        board.grid[3][2] = SNOWMAN_HEAD;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level50(Board board) {
         board.currentLevel = 50;
         board.clearBoard();
         board.grid[0][0] = SNOWMAN_HEAD;
-        board.grid[0][1] = SMALL_SNOWBALL;
-        board.grid[0][3] = SMALL_SNOWBALL;
-        board.grid[0][4] = SNOWMAN_HEAD;
+        board.grid[0][1] = BIG_SNOWBALL;
+        board.grid[0][2] = SMALL_SNOWBALL;
+        board.grid[0][4] = SMALL_SNOWBALL;
         board.grid[1][2] = TREE;
-        board.grid[2][0] = SMALL_SNOWBALL;
-        board.grid[2][4] = SMALL_SNOWBALL;
+        board.grid[1][4] = SNOWMAN_HEAD;
+        board.grid[2][0] = BIG_SNOWBALL;
+        board.grid[2][2] = TREE;
         board.grid[3][1] = SNOWMAN_HEAD;
+        board.grid[3][2] = SMALL_SNOWBALL;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level51(Board board) {
         board.currentLevel = 51;
         board.clearBoard();
-        board.grid[0][0] = SMALL_SNOWBALL;
+        board.grid[0][0] = BIG_SNOWBALL;
         board.grid[0][1] = SMALL_SNOWBALL;
         board.grid[0][3] = SNOWMAN_HEAD;
         board.grid[1][0] = TREE;
-        board.grid[1][3] = SNOWMAN_HEAD;
+        board.grid[1][4] = SNOWMAN_HEAD;
+        board.grid[2][0] = BIG_SNOWBALL;
         board.grid[2][2] = TREE;
-        board.grid[3][0] = SMALL_SNOWBALL;
+        board.grid[3][0] = BIG_SNOWBALL;
         board.grid[3][1] = SMALL_SNOWBALL;
+        board.grid[3][2] = SMALL_SNOWBALL;
         board.grid[3][3] = SNOWMAN_HEAD;
     }
 
     public static void Level52(Board board) {
         board.currentLevel = 52;
         board.clearBoard();
-        board.grid[0][1] = TREE;
-        board.grid[0][3] = SMALL_SNOWBALL;
-        board.grid[1][3] = SNOWMAN_HEAD;
+        board.grid[0][0] = TREE;
+        board.grid[0][1] = BIG_SNOWBALL;
+        board.grid[0][4] = BIG_SNOWBALL;
+        board.grid[1][3] = SMALL_SNOWBALL;
+        board.grid[1][4] = SNOWMAN_HEAD;
         board.grid[2][0] = SMALL_SNOWBALL;
-        board.grid[2][4] = SMALL_SNOWBALL;
-        board.grid[3][1] = SNOWMAN_HEAD;
+        board.grid[2][3] = SNOWMAN_HEAD;
+        board.grid[2][4] = BIG_SNOWBALL;
+        board.grid[3][1] = SMALL_SNOWBALL;
+        board.grid[3][2] = SNOWMAN_HEAD;
     }
 
     public static void Level53(Board board) {
         board.currentLevel = 53;
         board.clearBoard();
-        board.grid[0][0] = SMALL_SNOWBALL;
-        board.grid[0][1] = SNOWMAN_HEAD;
-        board.grid[0][3] = SNOWMAN_HEAD;
-        board.grid[1][1] = TREE;
-        board.grid[1][2] = TREE;
+        board.grid[0][0] = BIG_SNOWBALL;
+        board.grid[0][2] = TREE;
+        board.grid[1][1] = SNOWMAN_HEAD;
+        board.grid[1][3] = SNOWMAN_HEAD;
+        board.grid[2][0] = TREE;
         board.grid[3][0] = SMALL_SNOWBALL;
-        board.grid[3][4] = SMALL_SNOWBALL;
+        board.grid[3][1] = SMALL_SNOWBALL;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level54(Board board) {
         board.currentLevel = 54;
         board.clearBoard();
-        board.grid[0][2] = TREE;
-        board.grid[0][4] = SMALL_SNOWBALL;
+        board.grid[0][2] = BIG_SNOWBALL;
+        board.grid[1][1] = TREE;
         board.grid[1][4] = SNOWMAN_HEAD;
+        board.grid[2][1] = TREE;
         board.grid[2][4] = SNOWMAN_HEAD;
         board.grid[3][0] = SMALL_SNOWBALL;
+        board.grid[3][1] = SMALL_SNOWBALL;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level55(Board board) {
         board.currentLevel = 55;
         board.clearBoard();
-        board.grid[0][0] = SMALL_SNOWBALL;
+        board.grid[0][0] = BIG_SNOWBALL;
         board.grid[0][1] = TREE;
         board.grid[0][2] = SNOWMAN_HEAD;
         board.grid[0][3] = SNOWMAN_HEAD;
-        board.grid[0][4] = SMALL_SNOWBALL;
-        board.grid[3][2] = TREE;
+        board.grid[0][4] = BIG_SNOWBALL;
+        board.grid[3][0] = SMALL_SNOWBALL;
+        board.grid[3][3] = TREE;
+        board.grid[3][4] = SMALL_SNOWBALL;
     }
 
     public static void Level56(Board board) {
         board.currentLevel = 56;
         board.clearBoard();
         board.grid[0][1] = TREE;
-        board.grid[2][3] = SNOWMAN_HEAD;
-        board.grid[3][0] = SMALL_SNOWBALL;
-        board.grid[3][2] = TREE;
-        board.grid[3][4] = SMALL_SNOWBALL;
+        board.grid[0][3] = TREE;
+        board.grid[0][4] = SMALL_SNOWBALL;
+        board.grid[2][0] = SMALL_SNOWBALL;
+        board.grid[2][2] = SNOWMAN_HEAD;
+        board.grid[2][4] = BIG_SNOWBALL;
+        board.grid[3][1] = SNOWMAN_HEAD;
+        board.grid[3][3] = BIG_SNOWBALL;
     }
 
     public static void Level57(Board board) {
         board.currentLevel = 57;
         board.clearBoard();
-        board.grid[0][1] = TREE;
-        board.grid[0][3] = SNOWMAN_HEAD;
+        board.grid[0][2] = TREE;
         board.grid[1][0] = TREE;
         board.grid[1][2] = SMALL_SNOWBALL;
-        board.grid[1][4] = SNOWMAN_HEAD;
+        board.grid[1][3] = SNOWMAN_HEAD;
         board.grid[2][1] = SMALL_SNOWBALL;
-        board.grid[3][0] = SMALL_SNOWBALL;
-        board.grid[3][4] = SMALL_SNOWBALL;
+        board.grid[2][4] = SNOWMAN_HEAD;
+        board.grid[3][0] = BIG_SNOWBALL;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level58(Board board) {
         board.currentLevel = 58;
         board.clearBoard();
         board.grid[0][0] = TREE;
-        board.grid[0][4] = SNOWMAN_HEAD;
-        board.grid[1][0] = TREE;
-        board.grid[2][1] = SMALL_SNOWBALL;
+        board.grid[0][1] = SMALL_SNOWBALL;
+        board.grid[1][4] = SNOWMAN_HEAD;
+        board.grid[2][0] = TREE;
+        board.grid[2][2] = BIG_SNOWBALL;
+        board.grid[3][0] = SMALL_SNOWBALL;
         board.grid[3][3] = SNOWMAN_HEAD;
-        board.grid[3][4] = SMALL_SNOWBALL;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level59(Board board) {
         board.currentLevel = 59;
         board.clearBoard();
-        board.grid[0][3] = SMALL_SNOWBALL;
+        board.grid[0][0] = BIG_SNOWBALL;
+        board.grid[0][3] = BIG_SNOWBALL;
         board.grid[1][1] = TREE;
         board.grid[1][4] = SNOWMAN_HEAD;
         board.grid[2][0] = SNOWMAN_HEAD;
-        board.grid[2][1] = TREE;
+        board.grid[2][3] = TREE;
+        board.grid[3][1] = SMALL_SNOWBALL;
         board.grid[3][4] = SMALL_SNOWBALL;
     }
 
     public static void Level60(Board board) {
         board.currentLevel = 60;
         board.clearBoard();
+        board.grid[0][0] = BIG_SNOWBALL;
+        board.grid[0][1] = SMALL_SNOWBALL;
         board.grid[0][4] = SNOWMAN_HEAD;
         board.grid[1][1] = TREE;
         board.grid[1][2] = TREE;
         board.grid[2][0] = SNOWMAN_HEAD;
         board.grid[3][1] = SMALL_SNOWBALL;
-        board.grid[3][4] = SMALL_SNOWBALL;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level61(Board board) {
@@ -759,45 +802,60 @@ public class Levels {
         board.clearBoard();
         board.grid[0][0] = SNOWMAN_HEAD;
         board.grid[0][2] = SNOWMAN_HEAD;
+        board.grid[0][4] = SMALL_SNOWBALL;
         board.grid[1][1] = SNOWMAN_HEAD;
-        board.grid[2][0] = SMALL_SNOWBALL;
+        board.grid[1][3] = BIG_SNOWBALL;
+        board.grid[1][4] = TREE;
+        board.grid[2][0] = BIG_SNOWBALL;
         board.grid[2][1] = SMALL_SNOWBALL;
         board.grid[2][2] = SMALL_SNOWBALL;
-        board.grid[3][3] = SNOWMAN_HEAD;
+        board.grid[3][3] = BIG_SNOWBALL;
     }
 
     public static void Level62(Board board) {
         board.currentLevel = 62;
         board.clearBoard();
+        board.grid[0][0] = SMALL_SNOWBALL;
+        board.grid[0][1] = SMALL_SNOWBALL;
+        board.grid[0][2] = SMALL_SNOWBALL;
         board.grid[0][3] = SNOWMAN_HEAD;
-        board.grid[1][2] = TREE;
+        board.grid[1][1] = TREE;
+        board.grid[1][2] = BIG_SNOWBALL;
+        board.grid[1][3] = BIG_SNOWBALL;
         board.grid[1][4] = SNOWMAN_HEAD;
-        board.grid[2][0] = SMALL_SNOWBALL;
-        board.grid[2][1] = SMALL_SNOWBALL;
+        board.grid[2][1] = TREE;
         board.grid[3][3] = SNOWMAN_HEAD;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level63(Board board) {
         board.currentLevel = 63;
         board.clearBoard();
-        board.grid[0][3] = SNOWMAN_HEAD;
-        board.grid[1][0] = SNOWMAN_HEAD;
-        board.grid[1][1] = TREE;
-        board.grid[1][4] = SNOWMAN_HEAD;
-        board.grid[2][2] = SMALL_SNOWBALL;
+        board.grid[0][2] = BIG_SNOWBALL;
+        board.grid[0][4] = SMALL_SNOWBALL;
+        board.grid[1][2] = TREE;
+        board.grid[1][4] = SMALL_SNOWBALL;
+        board.grid[2][0] = SNOWMAN_HEAD;
+        board.grid[2][2] = SNOWMAN_HEAD;
+        board.grid[2][4] = SNOWMAN_HEAD;
         board.grid[3][0] = SMALL_SNOWBALL;
-        board.grid[3][4] = SMALL_SNOWBALL;
+        board.grid[3][2] = BIG_SNOWBALL;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level64(Board board) {
         board.currentLevel = 64;
         board.clearBoard();
-        board.grid[0][3] = SNOWMAN_HEAD;
+        board.grid[0][0] = SMALL_SNOWBALL;
+        board.grid[0][2] = SNOWMAN_HEAD;
         board.grid[1][0] = TREE;
         board.grid[1][1] = SNOWMAN_HEAD;
-        board.grid[1][4] = SNOWMAN_HEAD;
-        board.grid[3][1] = SMALL_SNOWBALL;
-        board.grid[3][3] = TREE;
+        board.grid[1][3] = SNOWMAN_HEAD;
+        board.grid[1][4] = BIG_SNOWBALL;
+        board.grid[2][3] = SMALL_SNOWBALL;
+        board.grid[2][4] = TREE;
+        board.grid[3][0] = BIG_SNOWBALL;
+        board.grid[3][1] = BIG_SNOWBALL;
         board.grid[3][4] = SMALL_SNOWBALL;
     }
 
@@ -807,28 +865,34 @@ public class Levels {
         board.grid[0][1] = SNOWMAN_HEAD;
         board.grid[0][3] = SNOWMAN_HEAD;
         board.grid[1][0] = TREE;
-        board.grid[1][4] = TREE;
-        board.grid[2][3] = SMALL_SNOWBALL;
-        board.grid[3][1] = SMALL_SNOWBALL;
+        board.grid[1][1] = SMALL_SNOWBALL;
+        board.grid[1][2] = BIG_SNOWBALL;
+        board.grid[2][2] = SMALL_SNOWBALL;
+        board.grid[2][4] = TREE;
+        board.grid[3][2] = BIG_SNOWBALL;
     }
 
     public static void Level66(Board board) {
         board.currentLevel = 66;
         board.clearBoard();
         board.grid[0][1] = SNOWMAN_HEAD;
-        board.grid[0][4] = SMALL_SNOWBALL;
-        board.grid[3][1] = SNOWMAN_HEAD;
+        board.grid[0][4] = BIG_SNOWBALL;
+        board.grid[2][0] = SMALL_SNOWBALL;
+        board.grid[3][2] = SNOWMAN_HEAD;
         board.grid[3][3] = SMALL_SNOWBALL;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level67(Board board) {
         board.currentLevel = 67;
         board.clearBoard();
-        board.grid[0][2] = SMALL_SNOWBALL;
+        board.grid[0][1] = BIG_SNOWBALL;
+        board.grid[0][4] = BIG_SNOWBALL;
         board.grid[1][0] = TREE;
+        board.grid[1][4] = SMALL_SNOWBALL;
         board.grid[2][0] = SNOWMAN_HEAD;
-        board.grid[2][4] = SMALL_SNOWBALL;
         board.grid[3][2] = SNOWMAN_HEAD;
+        board.grid[3][3] = SMALL_SNOWBALL;
     }
 
     public static void Level68(Board board) {
@@ -837,52 +901,74 @@ public class Levels {
         board.grid[0][0] = TREE;
         board.grid[0][2] = SNOWMAN_HEAD;
         board.grid[0][3] = SMALL_SNOWBALL;
-        board.grid[1][0] = TREE;
-        board.grid[3][3] = SNOWMAN_HEAD;
+        board.grid[1][0] = SMALL_SNOWBALL;
+        board.grid[1][1] = TREE;
+        board.grid[2][4] = BIG_SNOWBALL;
+        board.grid[3][0] = BIG_SNOWBALL;
+        board.grid[3][2] = SNOWMAN_HEAD;
     }
 
     public static void Level69(Board board) {
         board.currentLevel = 69;
         board.clearBoard();
-        board.grid[0][1] = SNOWMAN_HEAD;
+        board.grid[0][0] = BIG_SNOWBALL;
         board.grid[0][2] = SNOWMAN_HEAD;
-        board.grid[1][0] = TREE;
-        board.grid[2][2] = TREE;
-        board.grid[2][3] = SNOWMAN_HEAD;
-        board.grid[3][1] = SMALL_SNOWBALL;
-        board.grid[3][4] = SNOWMAN_HEAD;
+        board.grid[0][3] = SNOWMAN_HEAD;
+        board.grid[0][4] = BIG_SNOWBALL;
+        board.grid[1][0] = SMALL_SNOWBALL;
+        board.grid[1][1] = TREE;
+        board.grid[2][3] = TREE;
+        board.grid[2][4] = SNOWMAN_HEAD;
+        board.grid[3][0] = BIG_SNOWBALL;
+        board.grid[3][3] = SMALL_SNOWBALL;
+        board.grid[3][4] = SMALL_SNOWBALL;
     }
 
     public static void Level70(Board board) {
         board.currentLevel = 70;
         board.clearBoard();
         board.grid[0][1] = TREE;
+        board.grid[0][2] = SMALL_SNOWBALL;
         board.grid[0][3] = SMALL_SNOWBALL;
-        board.grid[1][0] = SMALL_SNOWBALL;
-        board.grid[1][4] = SNOWMAN_HEAD;
+        board.grid[1][1] = TREE;
+        board.grid[1][3] = SMALL_SNOWBALL;
+        board.grid[1][4] = BIG_SNOWBALL;
+        board.grid[2][0] = SNOWMAN_HEAD;
+        board.grid[2][1] = BIG_SNOWBALL;
+        board.grid[3][0] = SNOWMAN_HEAD;
+        board.grid[3][2] = BIG_SNOWBALL;
         board.grid[3][3] = SNOWMAN_HEAD;
     }
 
     public static void Level71(Board board) {
         board.currentLevel = 71;
         board.clearBoard();
-        board.grid[0][0] = SMALL_SNOWBALL;
+        board.grid[0][0] = BIG_SNOWBALL;
         board.grid[0][2] = TREE;
+        board.grid[0][4] = SMALL_SNOWBALL;
         board.grid[1][0] = SNOWMAN_HEAD;
-        board.grid[1][4] = SNOWMAN_HEAD;
-        board.grid[2][1] = SMALL_SNOWBALL;
-        board.grid[3][3] = SNOWMAN_HEAD;
-        board.grid[3][4] = SMALL_SNOWBALL;
+        board.grid[1][2] = TREE;
+        board.grid[1][4] = SMALL_SNOWBALL;
+        board.grid[2][0] = SNOWMAN_HEAD;
+        board.grid[2][1] = BIG_SNOWBALL;
+        board.grid[2][2] = SMALL_SNOWBALL;
+        board.grid[3][0] = BIG_SNOWBALL;
+        board.grid[3][4] = SNOWMAN_HEAD;
     }
 
     public static void Level72(Board board) {
         board.currentLevel = 72;
         board.clearBoard();
-        board.grid[0][0] = SMALL_SNOWBALL;
-        board.grid[0][2] = TREE;
-        board.grid[0][3] = SNOWMAN_HEAD;
-        board.grid[1][3] = SNOWMAN_HEAD;
-        board.grid[1][4] = SMALL_SNOWBALL;
+        board.grid[0][0] = BIG_SNOWBALL;
+        board.grid[0][1] = BIG_SNOWBALL;
+        board.grid[0][3] = BIG_SNOWBALL;
+        board.grid[0][4] = SMALL_SNOWBALL;
+        board.grid[1][0] = TREE;
+        board.grid[1][1] = SNOWMAN_HEAD;
+        board.grid[2][0] = SNOWMAN_HEAD;
+        board.grid[2][1] = SNOWMAN_HEAD;
+        board.grid[3][2] = SMALL_SNOWBALL;
+        board.grid[3][4] = SMALL_SNOWBALL;
     }
 
     public static void Level73(Board board) {
@@ -890,50 +976,64 @@ public class Levels {
         board.clearBoard();
         board.grid[0][1] = SNOWMAN_HEAD;
         board.grid[0][4] = SMALL_SNOWBALL;
-        board.grid[2][0] = SMALL_SNOWBALL;
+        board.grid[2][0] = BIG_SNOWBALL;
+        board.grid[2][4] = SMALL_SNOWBALL;
         board.grid[3][3] = SNOWMAN_HEAD;
-        board.grid[3][4] = SMALL_SNOWBALL;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level74(Board board) {
         board.currentLevel = 74;
         board.clearBoard();
         board.grid[0][0] = TREE;
-        board.grid[0][2] = SMALL_SNOWBALL;
+        board.grid[0][1] = BIG_SNOWBALL;
+        board.grid[0][2] = BIG_SNOWBALL;
+        board.grid[1][1] = SMALL_SNOWBALL;
+        board.grid[1][2] = SMALL_SNOWBALL;
         board.grid[1][4] = SNOWMAN_HEAD;
-        board.grid[2][1] = SNOWMAN_HEAD;
+        board.grid[2][0] = SNOWMAN_HEAD;
         board.grid[3][3] = TREE;
     }
 
     public static void Level75(Board board) {
         board.currentLevel = 75;
         board.clearBoard();
-        board.grid[0][2] = TREE;
+        board.grid[0][0] = SMALL_SNOWBALL;
+        board.grid[0][1] = TREE;
         board.grid[1][4] = SNOWMAN_HEAD;
         board.grid[2][0] = SMALL_SNOWBALL;
         board.grid[2][4] = SNOWMAN_HEAD;
-        board.grid[3][2] = TREE;
-        board.grid[3][4] = SMALL_SNOWBALL;
+        board.grid[3][0] = BIG_SNOWBALL;
+        board.grid[3][1] = TREE;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level76(Board board) {
         board.currentLevel = 76;
         board.clearBoard();
+        board.grid[0][0] = BIG_SNOWBALL;
         board.grid[0][3] = SNOWMAN_HEAD;
-        board.grid[1][1] = TREE;
-        board.grid[1][2] = SMALL_SNOWBALL;
+        board.grid[0][4] = SMALL_SNOWBALL;
+        board.grid[1][0] = TREE;
+        board.grid[1][2] = BIG_SNOWBALL;
         board.grid[2][4] = SNOWMAN_HEAD;
-        board.grid[3][0] = SMALL_SNOWBALL;
+        board.grid[3][1] = SMALL_SNOWBALL;
     }
 
     public static void Level77(Board board) {
         board.currentLevel = 77;
         board.clearBoard();
         board.grid[0][0] = TREE;
+        board.grid[0][1] = SMALL_SNOWBALL;
+        board.grid[0][3] = BIG_SNOWBALL;
         board.grid[1][0] = SNOWMAN_HEAD;
-        board.grid[1][2] = TREE;
-        board.grid[2][1] = SNOWMAN_HEAD;
-        board.grid[2][3] = SNOWMAN_HEAD;
+        board.grid[1][4] = SMALL_SNOWBALL;
+        board.grid[2][2] = TREE;
+        board.grid[2][3] = SMALL_SNOWBALL;
+        board.grid[2][4] = BIG_SNOWBALL;
+        board.grid[3][1] = SNOWMAN_HEAD;
+        board.grid[3][3] = SNOWMAN_HEAD;
+        board.grid[3][4] = BIG_SNOWBALL;
     }
 
     public static void Level78(Board board) {
@@ -942,31 +1042,43 @@ public class Levels {
         board.grid[0][1] = SNOWMAN_HEAD;
         board.grid[0][2] = SNOWMAN_HEAD;
         board.grid[0][3] = SNOWMAN_HEAD;
+        board.grid[0][4] = BIG_SNOWBALL;
         board.grid[2][0] = SMALL_SNOWBALL;
-        board.grid[2][4] = SMALL_SNOWBALL;
+        board.grid[2][4] = BIG_SNOWBALL;
+        board.grid[3][0] = SMALL_SNOWBALL;
+        board.grid[3][1] = SMALL_SNOWBALL;
+        board.grid[3][2] = BIG_SNOWBALL;
     }
 
     public static void Level79(Board board) {
         board.currentLevel = 79;
         board.clearBoard();
         board.grid[0][0] = TREE;
+        board.grid[0][2] = BIG_SNOWBALL;
         board.grid[0][4] = TREE;
         board.grid[1][0] = SNOWMAN_HEAD;
+        board.grid[1][1] = SNOWMAN_HEAD;
         board.grid[1][2] = SMALL_SNOWBALL;
-        board.grid[3][0] = TREE;
-        board.grid[3][2] = SNOWMAN_HEAD;
-        board.grid[3][4] = SNOWMAN_HEAD;
+        board.grid[2][0] = SNOWMAN_HEAD;
+        board.grid[2][1] = BIG_SNOWBALL;
+        board.grid[2][2] = SMALL_SNOWBALL;
+        board.grid[3][2] = BIG_SNOWBALL;
+        board.grid[3][4] = SMALL_SNOWBALL;
     }
 
     public static void Level80(Board board) {
         board.currentLevel = 80;
         board.clearBoard();
-        board.grid[0][0] = TREE;
-        board.grid[0][2] = SMALL_SNOWBALL;
-        board.grid[1][0] = SNOWMAN_HEAD;
-        board.grid[1][4] = SNOWMAN_HEAD;
-        board.grid[3][0] = TREE;
-        board.grid[3][2] = SNOWMAN_HEAD;
+        board.grid[0][0] = SMALL_SNOWBALL;
+        board.grid[0][1] = TREE;
+        board.grid[0][3] = SNOWMAN_HEAD;
+        board.grid[1][1] = BIG_SNOWBALL;
+        board.grid[1][2] = BIG_SNOWBALL;
+        board.grid[1][3] = SMALL_SNOWBALL;
+        board.grid[1][4] = BIG_SNOWBALL;
+        board.grid[2][0] = TREE;
+        board.grid[2][3] = SMALL_SNOWBALL;
         board.grid[3][3] = SNOWMAN_HEAD;
+        board.grid[3][4] = SNOWMAN_HEAD;
     }
 }
