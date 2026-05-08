@@ -20,8 +20,6 @@ public class Game {
     public boolean isGameWon() {
         return gameWon;
     }
-
-
     // puts level back to the start
     public void ReturntoTheBeggining() {
         board.Level1();
@@ -56,9 +54,9 @@ public class Game {
         int piece = board.getSquare(row, col);
 
         // only snowball pieces can move
-        if (piece != Board.SMALL_SNOWBALL
+      if (piece != Board.SMALL_SNOWBALL
                 && piece != Board.BIG_SNOWBALL
-                && piece != Board.SNOWMAN_HEAD) {
+                && piece != Board.SEMI_SNOWMAN) {
             return;
         }
 
@@ -96,7 +94,6 @@ public class Game {
                 if (currentRow != row || currentCol != col) {
                     board.Placer(currentRow, currentCol, piece); // keep original naming
                     board.Replacer(row, col);
-                    moveCount++;
                 }
 
                 checkWin();
@@ -109,11 +106,13 @@ public class Game {
             if (transformed != -1) {
 
                 board.Placer(nextRow, nextCol, transformed);
-                board.Replacer(row, col); 
-               checkWin();
+                  } else if (currentRow != row || currentCol != col) {
+                board.Placer(currentRow, currentCol, piece);
+            } else {
                 return;
             }
-
+            board.clearSquare(row, col);
+                checkWin();
             // blocked by something we don't handle yet
             return;
         }
@@ -122,11 +121,13 @@ public class Game {
     // creates snowman parts from combinations
     private int StackSnow(int moving, int target) {
 
-        if (moving == Board.SMALL_SNOWBALL && target == Board.BIG_SNOWBALL) {
+        if ((moving == Board.SMALL_SNOWBALL && target == Board.BIG_SNOWBALL)
+                || (moving == Board.BIG_SNOWBALL && target == Board.SMALL_SNOWBALL)) {            //This is was wrong previously that why it was not stacking
             return Board.SEMI_SNOWMAN;
         }
 
-        if (moving == Board.SNOWMAN_HEAD && target == Board.SEMI_SNOWMAN) {
+      if ((moving == Board.SNOWMAN_HEAD && target == Board.SEMI_SNOWMAN)
+                || (moving == Board.SEMI_SNOWMAN && target == Board.SNOWMAN_HEAD)) {
             return Board.FULL_SNOWMAN;
         }
 
@@ -168,9 +169,11 @@ public class Game {
 
     // retry only after losing
         public void Retry() {   
-        if (gameOver) {
-            board.Level1();
+         if (gameOver) {
+            board.loadLevel(1);            //I needed to retyrb board from boardclass to work
             gameOver = false;
+            gameWon = false;
+        }
         }
     }
 }
