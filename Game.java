@@ -1,15 +1,21 @@
+import java.util.prefs.Preferences;
+
 public class Game {
 
     private Board board;
+    private Preferences highScores;
     private boolean gameOver;
     private boolean gameWon;
+    private boolean newHighScore;
+    private int moveCount;
+
     public Game(Board board) {
         this.board = board;
-        this.gameOver = false;
-        this.gameWon = false;
+        this.highScores = Preferences.userRoot().node("snow_problem_high_scores");
+        resetLevelState();
     }
 
- public Board getBoard() {
+    public Board getBoard() {
         return board;
     }
 
@@ -20,11 +26,47 @@ public class Game {
     public boolean isGameWon() {
         return gameWon;
     }
-    // puts level back to the start
+
+    public int getMoveCount() {
+        return moveCount;
+    }
+
+    public int getBestMoves() {
+        return highScores.getInt("level" + board.getCurrentLevel(), 0);
+    }
+
+    public boolean hasNewHighScore() {
+        return newHighScore;
+    }
+
+    public String getHighScoreTable() {
+        String table = "Level   Best moves\n";
+
+        for (int level = 1; level <= Board.MAX_LEVEL; level++) {
+            int bestMoves = highScores.getInt("level" + level, 0);
+            table += level + "       " + (bestMoves == 0 ? "-" : bestMoves) + "\n";
+        }
+
+        return table;
+    }
+
+    public boolean nextLevelIfWon() {
+        if (!gameWon || board.getCurrentLevel() == Board.MAX_LEVEL) {
+            return false;
+        }
+
+        board.loadLevel(board.getCurrentLevel() + 1);
+        resetLevelState();
+        return true;
+    }
+
     public void ReturntoTheBeggining() {
-        board.Level1();
-        gameOver = false;
-        gameWon = false;
+        resetCurrentLevel();
+    }
+
+    public void resetCurrentLevel() {
+        board.loadLevel(board.getCurrentLevel());
+        resetLevelState();
     }
 
     public void moveUp(int row, int col) {
@@ -53,8 +95,7 @@ public class Game {
 
         int piece = board.getSquare(row, col);
 
-        // only snowball pieces can move
-      if (piece != Board.SMALL_SNOWBALL
+        if (piece != Board.SMALL_SNOWBALL
                 && piece != Board.BIG_SNOWBALL
                 && piece != Board.SEMI_SNOWMAN) {
             return;
@@ -63,7 +104,7 @@ public class Game {
         int currentRow = row;
         int currentCol = col;
 
-        // keeps moving, not just one square
+        // keeps moving untill object hits something
         while (true) {
 
             int nextRow = currentRow + rowChange;
@@ -72,8 +113,8 @@ public class Game {
             // if piece goes outside map player loses
             if (!board.isInsideBoard(nextRow, nextCol)) {
 
-                board.clearSquare(row, col); // remove original piece
-
+                board.clearSquare(row, col);
+                moveCount++;
                 gameOver = true;
 
                 return;
@@ -83,37 +124,28 @@ public class Game {
 
             // continue sliding if empty square
             if (nextPiece == Board.EMPTY) {
+
                 currentRow = nextRow;
                 currentCol = nextCol;
+
                 continue;
-            }
-
-            // tree blocks movement
-            if (nextPiece == Board.TREE) {
-
-                if (currentRow != row || currentCol != col) {
-                    board.Placer(currentRow, currentCol, piece); // keep original naming
-                    board.Replacer(row, col);
-                }
-
-                checkWin();
-                return;
             }
 
             // combines snowball pieces together
             int transformed = StackSnow(piece, nextPiece);
 
             if (transformed != -1) {
-
                 board.Placer(nextRow, nextCol, transformed);
-                  } else if (currentRow != row || currentCol != col) {
+            } else if (currentRow != row || currentCol != col) {
                 board.Placer(currentRow, currentCol, piece);
             } else {
                 return;
             }
+
             board.clearSquare(row, col);
-                checkWin();
-            // blocked by something we don't handle yet
+            moveCount++;
+            checkWin();
+
             return;
         }
     }
@@ -122,12 +154,11 @@ public class Game {
     private int StackSnow(int moving, int target) {
 
         if ((moving == Board.SMALL_SNOWBALL && target == Board.BIG_SNOWBALL)
-                || (moving == Board.BIG_SNOWBALL && target == Board.SMALL_SNOWBALL)) {            //This is was wrong previously that why it was not stacking
+                || (moving == Board.BIG_SNOWBALL && target == Board.SMALL_SNOWBALL)) {
             return Board.SEMI_SNOWMAN;
         }
 
-      if ((moving == Board.SNOWMAN_HEAD && target == Board.SEMI_SNOWMAN)
-                || (moving == Board.SEMI_SNOWMAN && target == Board.SNOWMAN_HEAD)) {
+        if (moving == Board.SEMI_SNOWMAN && target == Board.SNOWMAN_HEAD) {
             return Board.FULL_SNOWMAN;
         }
 
@@ -137,43 +168,53 @@ public class Game {
     // checks if all pieces are completed
     private void checkWin() {
 
-        int[][] grid = board.getGrid(); //returns the grid from Board.java
+        int fullSnowmen = 0;
+        int[][] grid = board.getGrid();
 
         for (int row = 0; row < Board.ROWS; row++) {
             for (int col = 0; col < Board.COLS; col++) {
-
-                int piece = grid[row][col];
-
-                // unfinished pieces means game still going
-                if (piece == Board.SMALL_SNOWBALL
-                        || piece == Board.BIG_SNOWBALL
-                        || piece == Board.SNOWMAN_HEAD
-                        || piece == Board.SEMI_SNOWMAN) {
-
-                    gameWon = false;
-                    return;
+                if (grid[row][col] == Board.FULL_SNOWMAN) {
+                    fullSnowmen++;
                 }
             }
         }
 
-        // no unfinished pieces left so player wins
-        gameWon = true;
-    }
-
-              // resets
-              public void resetGame() {
-        board = new Board();
-        gameOver = false;
-        gameWon = false;
-    }
-
-    // retry only after losing
-        public void Retry() {   
-         if (gameOver) {
-            board.loadLevel(1);            //I needed to retyrb board from boardclass to work
-            gameOver = false;
+        if (fullSnowmen >= board.getSnowmenNeeded()) {
+            gameWon = true;
+            saveHighScore();
+        } else {
             gameWon = false;
         }
+    }
+
+    public void resetGame() {
+
+        board = new Board();
+        resetLevelState();
+    }
+
+    public void Retry() {
+
+        if (gameOver) {
+            resetCurrentLevel();
+        }
+    }
+
+    private void resetLevelState() {
+        gameOver = false;
+        gameWon = false;
+        newHighScore = false;
+        moveCount = 0;
+    }
+
+    private void saveHighScore() {
+        String key = "level" + board.getCurrentLevel();
+        int bestMoves = highScores.getInt(key, 0);
+
+        if (bestMoves == 0 || moveCount < bestMoves) {
+            highScores.putInt(key, moveCount);
+            newHighScore = true;
         }
     }
 }
+
