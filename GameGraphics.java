@@ -45,7 +45,7 @@ public class GameGraphics extends JPanel {
     }
 
     private ImageIcon loadImage(String fileName) {
-        return new ImageIcon("C:/Users/josev/.vscode/resources/" + fileName);
+        return new ImageIcon("resources/" + fileName);
     }
 
     private void handleClick(MouseEvent e) {
